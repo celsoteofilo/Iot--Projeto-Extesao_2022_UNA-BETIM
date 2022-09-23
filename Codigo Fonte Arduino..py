@@ -1,9 +1,14 @@
-
-
-# ESTE E O CODIGO DA BUSSULA
-
-
 direcao = 0
+'''Aqui  a placa  eviara um sinal pelo rele acionando o botao 'A'
+ emitindo um sinal sonoro.'''
+
+def on_button_pressed_a():
+    music.play_melody("- - A A A A - - ", 120)
+input.on_button_pressed(Button.A, on_button_pressed_a)
+
+
+'''Aqui  o dispositivo vai nos mostra a posicao de orinetacao.
+# Usaremos o display.'''
 
 def on_forever():
     global direcao
@@ -24,5 +29,3 @@ def on_forever():
     else:
         basic.show_string("NO")
 basic.forever(on_forever)
-
-# ESTE E O CODIGO DO DETECTOR
